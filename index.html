@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>U-BACnet for Mac — Support</title>
+<style>
+  :root { color-scheme: dark; --bg:#0a0d12; --card:#12161d; --line:#1e242e; --ink:#e9edf3; --dim:#8d97a6; --blue:#4db3ff; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  .wrap { max-width:720px; margin:0 auto; padding:56px 24px 80px; }
+  header { border-bottom:1px solid var(--line); padding-bottom:28px; margin-bottom:36px; }
+  header img { width:72px; height:72px; border-radius:16px; display:block; margin-bottom:18px; }
+  h1 { margin:0 0 6px; font-size:30px; letter-spacing:-0.4px; }
+  .tag { color:var(--blue); font-size:13px; font-weight:600; letter-spacing:2px; text-transform:uppercase; }
+  h2 { margin:38px 0 10px; font-size:19px; letter-spacing:-0.2px; }
+  p, li { color:var(--dim); }
+  li { margin-bottom:7px; }
+  a { color:var(--blue); }
+  .lede { background:var(--card); border:1px solid var(--line); border-left:3px solid var(--blue); border-radius:12px; padding:18px 22px; }
+  .lede p { color:var(--ink); margin:0; }
+  footer { margin-top:56px; padding-top:22px; border-top:1px solid var(--line); font-size:13px; color:#6c7686; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <img src="icon.png" alt="U-BACnet icon">
+    <div class="tag">BACnet/IP for macOS</div>
+    <h1>U-BACnet for Mac — Support</h1>
+    <p>Discover, read, write and monitor BACnet/IP building automation devices from your Mac.</p>
+  </header>
+
+  <div class="lede">
+    <p>Questions, bug reports or feature requests? Reach us through the
+    <a href="https://ubacnet.com/contact">contact page</a> — we usually answer within two business days.</p>
+  </div>
+
+  <h2>Getting started</h2>
+  <ol>
+    <li>Connect your Mac to the same network (or VLAN) as your BACnet/IP controllers.</li>
+    <li>Open U-BACnet and click <b>Start Scanning</b>. Devices answer the Who-Is broadcast and appear in the sidebar.</li>
+    <li>Select a device to load its points, then select a point to see its value, properties and live chart.</li>
+    <li>No devices at hand? Choose <b>Explore the Demo Network</b> (or File › Explore Demo Network) to try every feature against a simulated building.</li>
+  </ol>
+
+  <h2>Troubleshooting</h2>
+  <ul>
+    <li><b>No devices found</b> — make sure macOS allowed U-BACnet to use the local network (System Settings › Privacy &amp; Security › Local Network), that UDP port 47808 (0xBAC0) is not blocked, and that you picked the right interface in Settings › Network.</li>
+    <li><b>Devices on another subnet</b> — BACnet broadcasts don't cross routers; use a BBMD on the remote network or connect to that subnet.</li>
+    <li><b>Writes are rejected</b> — the device may require a different priority, or the point may be read-only or out of service.</li>
+    <li><b>Acknowledging an alarm fails</b> — some controllers require a specific acknowledging source or a password; check the controller's alarm configuration.</li>
+  </ul>
+
+  <h2>Supported services</h2>
+  <p>Who-Is/I-Am, Who-Has/I-Have, ReadProperty, ReadPropertyMultiple, WriteProperty, ReadRange (Trend Log),
+  SubscribeCOV and COV notifications, event notifications, GetAlarmSummary, AcknowledgeAlarm,
+  TimeSynchronization, DeviceCommunicationControl and ReinitializeDevice.</p>
+
+  <h2>Privacy</h2>
+  <p>U-BACnet collects no personal data. Read the <a href="privacy.html">privacy policy</a>.</p>
+
+  <footer>U-BACnet for Mac · BACnet is a registered trademark of ASHRAE.</footer>
+</div>
+</body>
+</html>
